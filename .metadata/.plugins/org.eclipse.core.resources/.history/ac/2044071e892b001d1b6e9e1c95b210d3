@@ -1,0 +1,32 @@
+package sathya.com;
+
+public class Q4_HowToPrintTriangle {
+	
+	int no_of_rows = 5;
+	
+	private void printStarTriangle() {
+		for(int row=0; row<no_of_rows;row++) {
+			for(int column=0; column<=row;column++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+	}
+	
+	private void printNumberTriangle() {
+		int startNum=1;
+		for(int row =0; row<no_of_rows; row++) {
+			for(int column=0; column<=row; column++) {
+				System.out.print(startNum);
+				startNum++;
+			}
+			System.out.println();
+		}
+	}
+	
+	public static void main (String[] args) {
+		Q4_HowToPrintTriangle triangle = new Q4_HowToPrintTriangle();
+		triangle.printStarTriangle();
+	}
+
+}

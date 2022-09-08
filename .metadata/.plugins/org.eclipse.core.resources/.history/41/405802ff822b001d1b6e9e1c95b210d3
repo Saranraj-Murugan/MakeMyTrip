@@ -1,0 +1,25 @@
+package sathya.com;
+
+public class Q3_HowToReverseNumber {
+
+	int given = 123454321;
+	int reversed = 0;
+	
+	
+	private void reverseNumber() {
+	while(given!=0) {
+	reversed=reversed*10;
+	reversed=reversed+given%10;
+	given=given/10;
+	}
+	System.out.println(reversed);
+	}
+	
+	public static void main(String[] args) {
+		Q3_HowToReverseNumber rev = new Q3_HowToReverseNumber();
+		rev.reverseNumber();
+	}
+	
+	
+	
+}

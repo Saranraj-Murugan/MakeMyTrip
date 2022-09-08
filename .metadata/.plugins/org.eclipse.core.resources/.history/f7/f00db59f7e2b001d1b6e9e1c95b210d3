@@ -1,0 +1,48 @@
+package sathya.com;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.ListIterator;
+
+public class HowToReverseString {
+
+	
+	String given = "Welcome to Automation";
+	
+	
+	private void usingStringBuffer() {
+		StringBuffer buffer = new StringBuffer();
+		buffer.append(given);
+		System.out.println("Using String Buffer = "+buffer.reverse());	
+	}
+	
+	private void usingStringBuilder() {
+		StringBuilder builder = new StringBuilder();
+		builder.append(given);
+		System.out.println("Using String Builder = "+builder.reverse());
+	}
+	
+	private void usingCollection() {
+		List<Character> al = new ArrayList<Character>();
+		char[] array = given.toCharArray();
+		for(Character ch : array) {
+			al.add(ch);
+		}
+		Collections.reverse(al);
+		System.out.print("Using Collection = ");
+		ListIterator list = al.listIterator();
+		while(list.hasNext()) {
+			System.out.print(list.next());
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		HowToReverseString string = new HowToReverseString();
+		string.usingStringBuffer();
+		string.usingStringBuilder();
+		string.usingCollection();
+	}
+
+}

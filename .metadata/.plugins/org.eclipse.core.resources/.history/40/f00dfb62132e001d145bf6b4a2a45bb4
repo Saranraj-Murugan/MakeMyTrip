@@ -1,0 +1,14 @@
+package Java.programs;
+
+public class A {
+
+	
+	private A() {
+		System.out.println("I am a private Constructor");
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}

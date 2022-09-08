@@ -1,0 +1,36 @@
+package com.selenium.practice;
+
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class WindowsHandling {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\MURALI\\eclipse-workspace\\MMT_BusBooking\\Driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("http://testleaf.herokuapp.com/");
+		
+		driver.findElement(By.xpath("//*[@id=\"post-153\"]/div[2]/div/ul/li[11]/a/img")).click();
+		
+		String windowID=driver.getWindowHandle();
+		System.out.println(windowID);
+		driver.findElement(By.xpath("//*[@id=\"contentblock\"]/section/div[2]/div/div/button")).click();
+		Set<String> windowsID = driver.getWindowHandles();
+		System.out.println(windowsID);
+		
+		System.out.println(windowsID.size());
+		for(String child:windowsID) {
+			while(child != windowID) {
+				driver.switchTo().window(child);
+				driver.close();
+				
+			}
+		}
+		
+	}
+
+}

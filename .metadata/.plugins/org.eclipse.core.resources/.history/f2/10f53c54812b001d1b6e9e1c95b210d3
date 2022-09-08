@@ -1,0 +1,30 @@
+package sathya.com;
+
+public class HowToSwapTwoNumbers {
+	
+	//Method1
+	private void usingThirdVariable() {
+		
+		int a = 10;
+		int b = 45;
+		int c=a;
+		a=b;
+		b=c;
+		System.out.println("AfterSwapping a and b = "+a+ " "+b+ "");	
+	}
+	
+	private void withoutUsingThirdVariable() {
+		int a = 20;
+		int b = 35;
+		a=a+b;
+		b=a-b;
+		a=a-b;
+		System.out.println("After swapping a and b = "+a+ " "+b+"");
+	}
+	public static void main(String[] args) {
+		HowToSwapTwoNumbers num = new HowToSwapTwoNumbers();
+		num.usingThirdVariable();
+		num.withoutUsingThirdVariable();
+	}
+
+}

@@ -1,0 +1,39 @@
+package sathya.com;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Q5_HoToReverseWord {
+	
+	String given="Welcome To Java";
+	String rev="";
+	public  void reverse() {
+		String[] split = given.split(" ");
+		for(int i = split.length-1; i >=0; i--) {
+			rev=rev+split[i]+" ";
+		}
+		System.out.println(rev);
+	}
+	
+	public void usingCollection() {
+		String[] split = given.split(" ");
+		List al = new ArrayList();
+		for(String word : split) {
+			al.add(word);
+		}
+		Collections.reverse(al);
+		System.out.print(al);
+	}
+	
+	
+	public static void main (String[] args) {
+		Q5_HoToReverseWord word = new Q5_HoToReverseWord();
+		word.reverse();
+		word.usingCollection();
+	}
+	
+	
+	
+
+}

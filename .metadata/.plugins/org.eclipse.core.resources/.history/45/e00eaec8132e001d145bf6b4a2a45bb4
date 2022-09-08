@@ -1,0 +1,13 @@
+package Java.programs;
+
+public class A {
+
+	int num = 0;
+	
+	public static void main(String[] args) {
+		
+		A a = new A();
+		
+	}
+
+}

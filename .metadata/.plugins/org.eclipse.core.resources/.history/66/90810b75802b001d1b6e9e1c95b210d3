@@ -1,0 +1,19 @@
+package sathya.com;
+
+public class HowToSwapTwoNumbers {
+	
+	private void usingThirdVariable() {
+		int a = 10;
+		int b = 45;
+		int c=a;
+		a=b;
+		b=c;
+		System.out.println("AfterSwapping a and b = "+a+""+b+"");	
+	}
+	
+	public static void main(String[] args) {
+		HowToSwapTwoNumbers num = new HowToSwapTwoNumbers();
+		num.usingThirdVariable();
+	}
+
+}

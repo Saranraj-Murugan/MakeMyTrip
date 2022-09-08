@@ -1,0 +1,32 @@
+package sathya.com;
+
+public class Q8_HowToFindSmallestNumberInAnArray {
+	
+	int[] givenArray = {10,5,3,1,6,2,8};
+	
+	public void usingNormalForLoop() 
+	{
+		int smallest = Integer.MAX_VALUE;
+		
+		for(int small:givenArray) 
+		{
+			
+			if(small<smallest) 
+			{
+				smallest=small;
+			}
+		}
+		System.out.println(smallest);
+		
+	}
+	public static void main (String[] args) {
+			Q8_HowToFindSmallestNumberInAnArray obj = new Q8_HowToFindSmallestNumberInAnArray();
+			obj.usingNormalForLoop();
+			
+			
+		}
+		
+	}
+	
+	
+

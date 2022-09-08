@@ -1,0 +1,28 @@
+package sathya.com;
+
+public class HowToReverseString {
+
+	
+	String given = "Welcome to Automation";
+	
+	
+	private void usingStringBuffer() {
+		StringBuffer buffer = new StringBuffer();
+		buffer.append(given);
+		System.out.println("Using String Buffer = "+buffer.reverse());	
+	}
+	
+	private void usingStringBuilder() {
+		StringBuilder builder = new StringBuilder();
+		builder.append(given);
+		System.out.println("Using String Builder = "+builder.reverse());
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		HowToReverseString string = new HowToReverseString();
+		string.usingStringBuffer();
+	}
+
+}

@@ -1,0 +1,24 @@
+package sathya.com;
+
+public class HowToReverseString {
+
+	
+	String given = "Welcome to Automation";
+	
+	
+	private void usingStringBuffer() {
+		StringBuffer buffer = new StringBuffer();
+		buffer.append(given);
+		buffer.reverse();
+		System.out.println("Using String Buffer = "+buffer.reverse());
+		
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+
+}
